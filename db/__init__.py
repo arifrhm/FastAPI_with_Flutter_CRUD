@@ -5,6 +5,7 @@ from config import settings
 from sqlalchemy.orm import sessionmaker
 import warnings
 from sqlalchemy import exc as sa_exc
+# from models import *
 
 warnings.simplefilter("ignore", category=sa_exc.SAWarning)
 

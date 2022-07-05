@@ -10,7 +10,7 @@ from sqlalchemy.exc import SQLAlchemyError
 import gevent
 from fastapi.logger import logger
 
-async def fetch_users(db_session :AsyncSession) -> ResponseOutCustom:
+async def fetch_transactions(db_session :AsyncSession) -> ResponseOutCustom:
     async with db_session as session:
         try :
             query_fetch_users = select(user_models.Users)
@@ -52,7 +52,7 @@ async def fetch_users(db_session :AsyncSession) -> ResponseOutCustom:
                 list_data=[],
             )
 
-async def post_user(request: Users, db_session: AsyncSession) -> ResponseOutCustom:
+async def post_transactions(request: Users, db_session: AsyncSession) -> ResponseOutCustom:
     new_user_registration = user_models.Users(
         name = request.name,
         email = request.email,
@@ -79,7 +79,7 @@ async def post_user(request: Users, db_session: AsyncSession) -> ResponseOutCust
                                      list_data={'msg': str(e)})
 
         
-async def update_user(id: int, request: Users, db_session: AsyncSession) -> ResponseOutCustom:
+async def update_transactions(id: int, request: Users, db_session: AsyncSession) -> ResponseOutCustom:
     async with db_session as session:
         try:
             # PUT : update table from database with query and async session
@@ -146,7 +146,7 @@ async def update_user(id: int, request: Users, db_session: AsyncSession) -> Resp
                 list_data=None,
             )
 
-async def delete_user(id: int, db_session:AsyncSession) -> ResponseOutCustom:
+async def delete_transactions(id: int, db_session:AsyncSession) -> ResponseOutCustom:
     async with db_session as session:
         try:
             query_stmt = select(user_models.Users).where(

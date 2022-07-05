@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, MetaData
+from sqlalchemy.ext.declarative import declarative_base
 
-engine = create_engine('mysql+asyncmy://root:@localhost:3306/test_fastapi_database')
+engine = create_engine('postgresql+asyncpg://arifrahman:RSCunited2021@localhost:5432/flutter_db')
 
 meta = MetaData()
 
