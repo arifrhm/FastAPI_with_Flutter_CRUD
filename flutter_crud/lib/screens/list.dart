@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_crud/screens/form.dart';
 import 'package:http/http.dart' as http;
@@ -27,7 +28,9 @@ Future fetch_users() async {
         password: u['password']));
   }
 
-  print(users);
+  if (kDebugMode) {
+    print(users);
+  }
 
   return users;
 }

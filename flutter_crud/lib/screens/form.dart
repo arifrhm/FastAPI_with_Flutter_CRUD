@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_crud/screens/list.dart';
 import 'package:http/http.dart' as http;
@@ -117,7 +118,9 @@ class _MyFormState extends State<MyForm> {
                   email: emailController.text,
                   password: passwordController.text));
 
-              print(nameController.text);
+              if (kDebugMode) {
+                print(nameController.text);
+              }
 
               setState(() {
                 Navigator.push(
@@ -143,7 +146,9 @@ class _MyFormState extends State<MyForm> {
                 //
                 await delete(idController.text);
 
-                print(nameController.text);
+                if (kDebugMode) {
+                  print(nameController.text);
+                }
 
                 setState(() {
                   Navigator.push(

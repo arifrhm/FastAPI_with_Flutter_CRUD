@@ -16,8 +16,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   Widget _currentWidget = MyList();
-  var _titles = ['List', 'Form'];
-  var _widgets = [
+  final _titles = ['List', 'Form'];
+  final _widgets = [
     const MyList(),
     MyForm(
       user: User(id: 0, name: '', email: '', password: ''),

@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine, MetaData
 
-engine = create_engine('mysql+pymysql://root:password@localhost:3306/test')
+engine = create_engine('mysql+asyncmy://root:@localhost:3306/test_fastapi_database')
 
 meta = MetaData()
 
