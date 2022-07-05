@@ -17,8 +17,8 @@ from sqlalchemy import (
 from sqlalchemy.sql import func
 import uuid
 
-class Orders(Base):
-    __tablename__ = "orders"
+class LogOrders(Base):
+    __tablename__ = "log_orders"
 
     id = Column(Integer, primary_key = True, index = True, autoincrement = True)
     nama_barang = Column(String(50))
