@@ -20,7 +20,7 @@ import uuid
 class LogOrders(Base):
     __tablename__ = "log_orders"
 
-    id = Column(Integer, primary_key = True, index = True, autoincrement = True)
+    id = Column(BigInteger, ForeignKey("transaksi.id"), primary_key = True, autoincrement = True)
     nama_barang = Column(String(50))
     stok = Column(Integer)       
     jumlah_terjual = Column(Integer)
