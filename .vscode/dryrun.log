@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Volumes/AR_STORAGE/TES FLUTTER/FastAPI_with_Flutter_CRUD'
+make: Leaving directory `/Volumes/AR_STORAGE/TES FLUTTER/FastAPI_with_Flutter_CRUD'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
